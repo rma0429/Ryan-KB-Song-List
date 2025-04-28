@@ -7,15 +7,40 @@ const Content: QuartzComponent = ({ fileData, tree }: QuartzComponentProps) => {
   const classes: string[] = fileData.frontmatter?.cssclasses ?? []
   const classString = ["popover-hint", ...classes].join(" ")
 
-  const { singerkey, style, bpm } = fileData.frontmatter || {}
+  const { tags = [], style = "", bpm = "" } = fileData.frontmatter ?? {}
 
   return (
     <article class={classString}>
-      <div class="meta-line">
-        {singerkey && <span class="meta-inline">Singer&Key: {singerkey}</span>}
-        {style && <span class="meta-inline">Style: {style}</span>}
-        {bpm && <span class="meta-inline">BPM: {bpm}</span>}
+      <div class="meta-block">
+        {/* Singer/Key */}
+        {tags.length > 0 && (
+          <div class="meta-line">
+            <span class="meta-label">🎤 Singer&Key:</span>
+            {tags.map((tag: string) => (
+              <span class="tag-badge">{tag}</span>
+            ))}
+          </div>
+        )}
+
+        {/* Style */}
+        <div class="meta-line">
+          <span class="meta-label">🎵 Style:</span>
+          {style ? (
+            <span class="meta-inline">{style}</span>
+          ) : (
+            <span class="meta-inline">[ ]</span>
+          )}
+        </div>
+
+        {/* BPM */}
+        {bpm && (
+          <div class="meta-line">
+            <span class="meta-label">🧭 BPM:</span>
+            <span class="meta-inline">{bpm}</span>
+          </div>
+        )}
       </div>
+
       {content}
     </article>
   )

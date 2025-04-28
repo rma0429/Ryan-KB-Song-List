@@ -1,6 +1,11 @@
 ---
 tags:
   - Steph
-style: Piano
+  - -３
+  - 竹
+  - ２
+  - 丰
+  - -５
+Style: Piano
 bpm: --
 ---
