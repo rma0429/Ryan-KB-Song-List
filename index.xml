@@ -6,6 +6,12 @@
       <description>Last 10 notes on Ryan-KB Song List</description>
       <generator>Quartz -- quartz.jzhao.xyz</generator>
       <item>
+    <title>TEST</title>
+    <link>https://Quartz/Ryan-KB-Song-List/TEST</link>
+    <guid>https://Quartz/Ryan-KB-Song-List/TEST</guid>
+    <description> Note 第一行歌詞 第二行歌詞 第三行歌詞 （確保每行後都有兩個空格或 &lt;br&gt; 換行） .</description>
+    <pubDate>Tue, 29 Apr 2025 09:27:06 GMT</pubDate>
+  </item><item>
     <title>Hotel California</title>
     <link>https://Quartz/Ryan-KB-Song-List/Hotel-California</link>
     <guid>https://Quartz/Ryan-KB-Song-List/Hotel-California</guid>
@@ -59,12 +65,6 @@
     <guid>https://Quartz/Ryan-KB-Song-List/X-------------------X</guid>
     <description></description>
     <pubDate>Mon, 28 Apr 2025 16:58:41 GMT</pubDate>
-  </item><item>
-    <title>W - - - - - - - - - W</title>
-    <link>https://Quartz/Ryan-KB-Song-List/W-------------------W</link>
-    <guid>https://Quartz/Ryan-KB-Song-List/W-------------------W</guid>
-    <description></description>
-    <pubDate>Mon, 28 Apr 2025 16:58:39 GMT</pubDate>
   </item>
     </channel>
   </rss>
