@@ -1,0 +1,32 @@
+name: Deploy Quartz site
+on:
+  push:
+    branches:
+      - main  # ⬅️ 確保這是您推送「原始碼」的主要分支
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0 # Fetches all history
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20' # 確保 Node.js 版本
+          cache: 'npm'
+
+      - name: Install Dependencies
+        run: npm install
+
+      - name: Build Quartz
+        run: npx quartz build
+
+      - name: Deploy to GitHub Pages
+        uses: peaceiris/actions-gh-pages@v4
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./public # Quartz 建立的資料夾
+          publish_branch: gh-pages # 推送 HTML 到這個分支

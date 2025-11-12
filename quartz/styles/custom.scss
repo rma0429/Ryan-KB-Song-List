@@ -1,3 +1,101 @@
 @use "./base.scss";
 
-// put your custom CSS here!
+/* 強制預設深色模式 */
+@media (prefers-color-scheme: light) {
+  body {
+    background-color: #161618;
+    color: #ebebec;
+  }
+}
+
+/* TAG 樣式強制覆蓋 */
+a.internal.tag-link {
+  background-color: #393939 !important;
+  color: white !important;
+  border-radius: 999px;
+  padding: 6px 12px;
+  font-size: 1.2em;
+  font-weight: 600;
+  text-decoration: none;
+  display: inline-block;
+}
+
+a.internal.tag-link::before {
+  content: "" !important;
+}
+
+/* Tag 容器排版 */
+.tags {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5em;
+  padding: 0;
+  margin: 1rem 0;
+}
+.tags > li {
+  display: inline-block;
+}
+
+/* PageList 目錄排版 */
+ul.section-ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+li.section-li {
+  display: block;
+  padding: 12px 0;
+  border-bottom: 1px solid var(--gray);
+}
+.section-line {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+.title-inline a {
+  font-size: 1.2em;
+  font-weight: bold;
+  color: white;
+  text-decoration: none;
+}
+.meta-inline {
+  background: #333;
+  color: white;
+  padding: 4px 10px;
+  border-radius: 999px;
+  font-size: 1em;
+}
+
+/* <details> 樣式 */
+details {
+  white-space: pre-wrap;
+  margin-bottom: 1rem;
+  border-left: 2px solid var(--gray);
+  padding-left: 1rem;
+}
+details summary {
+  cursor: pointer;
+  user-select: none;
+  font-weight: bold;
+  margin-bottom: 0.5em;
+}
+details summary::after {
+  content: "▼";
+  font-size: 0.8em;
+  margin-left: 0.5em;
+}
+details[open] summary::after {
+  content: "▲";
+}
+details p {
+  margin: 0.25em 0;
+}
+details,
+details * {
+  white-space: pre-wrap !important;
+}
+
+details p {
+  margin: 0.5em 0;
+}

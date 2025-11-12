@@ -1,19 +1,17 @@
-.content-meta {
-  margin-top: 0;
-  color: var(--gray);
-
-  &[show-comma="true"] {
-    > *:not(:last-child) {
-      margin-right: 8px;
-
-      &::after {
-        content: ",";
-      }
-    }
-  }
+.tag-badge {
+  background: #393939 !important; /* 深灰底色，強制覆蓋 */
+  color: white !important;         /* 白色字，強制覆蓋 */
+  padding: 4px 10px;
+  border-radius: 999px;
+  font-size: 0.85em;
+  margin-right: 5px;
+  text-decoration: none !important;
+  border: none !important;
+  box-shadow: none !important;
 }
-.meta-block {
-  margin-bottom: 1.5em;
+
+.tag-badge::before {
+  content: ""; /* ✅ 不加 # */
 }
 
 .meta-line {
@@ -24,18 +22,13 @@
   gap: 0.5em;
 }
 
+.meta-inline {
+  font-size: 1.3em;
+  font-weight: 600; /* 加粗 */
+  color: #ffffff !important;
+}
+
 .meta-label {
   font-weight: bold;
-}
-
-.tag-badge {
-  background: var(--lightgray);
-  color: var(--dark);
-  padding: 2px 8px;
-  border-radius: 999px;
-  font-size: 0.85em;
-}
-
-.meta-inline {
-  font-size: 0.95em;
+  color: #ffffff !important;
 }
