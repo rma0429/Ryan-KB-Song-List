@@ -1,10 +1,15 @@
+# 1. 忽略 Quartz 專案的依賴和建置檔案
+node_modules/
+public/
+.quartz-cache/
+
+# 2. 忽略系統和編輯器檔案
 .DS_Store
-.gitignore
-node_modules
-prof
-tsconfig.tsbuildinfo
-.obsidian
-.quartz-cache
-private/
-.replit
-replit.nix
+Thumbs.db
+
+# 3. 忽略【您的】Obsidian 私密內容 (最關鍵的保護)
+# 忽略 Obsidian 設定檔
+.obsidian/
+
+# 忽略所有私密筆記
+Private_Notes
